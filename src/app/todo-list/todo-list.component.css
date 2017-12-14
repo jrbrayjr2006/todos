@@ -1,0 +1,11 @@
+li {
+    list-style: none;
+}
+
+li.completed-item {
+    text-decoration: line-through;
+}
+
+span.description-text {
+    font-weight: bold;
+}
