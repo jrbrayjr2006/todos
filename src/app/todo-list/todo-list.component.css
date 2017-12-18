@@ -9,3 +9,7 @@ li.completed-item {
 span.description-text {
     font-weight: bold;
 }
+
+input.ng-invalid.ng-touched {
+    border: solid #ff0000;
+}

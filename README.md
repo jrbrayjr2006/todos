@@ -22,6 +22,18 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Deploying to Pivotal Cloud Foundry (PCF)
+
+Deploying this app to PCF is straight forward.
+1.  Build a production version of the app using `ng build prod`
+2.  Change to the dist directory by `cd dist`
+3.  Login to PCF `cf login`
+4.  Push the application
+```
+cf push -b staticfile_buildpack todos
+```
+
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

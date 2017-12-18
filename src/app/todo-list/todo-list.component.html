@@ -1,11 +1,11 @@
 <h3>Current Todos List</h3>
 <div class="row">
     <div class="col-md-12">
-        <form>
+        <form #todoForm="ngForm">
             <div class="form-group">
                 <label for="todo">Add new Todo</label>
-                <input type="text" class="form-control" id="todo" name="todo" placeholder="Enter todo here" [(ngModel)]="description" />
-                <button class="btn btn-primary" (click)="onCreateTodo()">Create Todo</button>
+                <input type="text" class="form-control" id="todo" name="todo" placeholder="Enter todo here" [(ngModel)]="description" required #todoDescription />
+                <button class="btn btn-primary" (click)="onCreateTodo()" [disabled]="todoForm.ng-invalid">Create Todo</button>
                 <button class="btn btn-warning" (click)="clearAll()">Clear All</button>
             </div>
         </form>
@@ -20,7 +20,7 @@
 <div class="row">
     <div class="col-md-12">
         <ul>
-            <li #listitem *ngFor="let todo of todos" [ngClass]="{'completed-item': onChangeStatus(todo)}" id={{todo.id}}> <div><input type="checkbox" (click)="isSelected(todo)" /><span class="description-text">{{todo.description}}</span> <span>{{todo.dateCreated}}</span></div></li>
+            <li #listitem *ngFor="let todo of todos; let i of index" [ngClass]="{'completed-item': todo.completed}" id={{todo.id}}> <div><input type="checkbox" (click)="isSelected(todo.id)" /><span class="description-text">{{todo.description}}</span> <span>{{todo.dateCreated}}</span></div></li>
         </ul>
     </div>
 </div>

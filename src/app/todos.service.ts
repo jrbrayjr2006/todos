@@ -18,6 +18,10 @@ export class TodosService {
     console.info(this.todos);
   }
 
+  updateTodo(index: number, updatedTodo: Todo) {
+    this.todos[index] = updatedTodo;
+  }
+
   clearTodos() {
     console.info("TodoService.clearTodos()...");
     this.todos = [];
