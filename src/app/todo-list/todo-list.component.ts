@@ -28,7 +28,7 @@ export class TodoListComponent implements OnInit {
   }
 
   onCreateTodo() {
-    console.info("Triggered onCreateTodo...");
+    console.info('Triggered onCreateTodo...');
     if(this.description.length === 0) {
       return;
     } else {
@@ -37,7 +37,7 @@ export class TodoListComponent implements OnInit {
       this.todo = new Todo(this.description, this.completed, this.dateCreated, this.todoSelectedIndex);
       this.todosService.createTodo(this.todo);
       this.todos = this.todosService.getTodos();
-      this.description = "";
+      this.description = '';
       this.taskCount = this.todos.length;
     }
   }
