@@ -1,6 +1,6 @@
 # Todos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
+This project is the client-side component of a project to test some frameworks and programming patterns.  This project is built on Angular 5 and Bootstrap 4.  This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
 ## Development server
 
@@ -27,7 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 Deploying this app to PCF is straight forward.
 1.  Build a production version of the app using `ng build prod`
 2.  Change to the dist directory by `cd dist`
-3.  Login to PCF `cf login`
+3.  Login to PCF `cf login -a api.run.pivotal.io`
 4.  Push the application
 ```
 cf push -b staticfile_buildpack todos

@@ -20,7 +20,7 @@
 <div class="row">
     <div class="col-md-12">
         <ul>
-            <li #listitem *ngFor="let todo of todos; let i of index" [ngClass]="{'completed-item': todo.completed}" id={{todo.id}}> <div><input type="checkbox" (click)="isSelected(todo.id)" /><span class="description-text">{{todo.description}}</span> <span>{{todo.dateCreated}}</span></div></li>
+            <li #listitem *ngFor="let todo of todos; let i of index" [ngClass]="{'completed-item': todo.completed}" id={{todo.id}}> <div><input type="checkbox" (click)="isSelected(todo.id)" /><span class="description-text">{{todo.description}}</span> <span>{{todo.dateCreated | date}}</span></div></li>
         </ul>
     </div>
 </div>
