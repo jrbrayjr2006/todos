@@ -30,7 +30,7 @@ Deploying this app to PCF is straight forward.
 3.  Login to PCF `cf login -a api.run.pivotal.io`
 4.  Push the application
 ```
-cf push -b staticfile_buildpack todos
+cf push -b staticfile_buildpack todos-jbray
 ```
 
 

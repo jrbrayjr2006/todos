@@ -44,17 +44,17 @@ export class TodoListComponent implements OnInit {
 
   // method should accept parameter for element
   onChangeStatus(selected: any) {
-    console.info("Status changed...");
+    console.info('Status changed...');
     return this.selectedTodo === selected;
   }
 
   isSelected(selectedIndex: number) {
-    console.info("Todo selected...");
+    console.info('Todo selected...');
     this.todos[selectedIndex - 1].setCompleted(!this.todos[selectedIndex - 1].isCompleted());
   }
 
   clearAll() {
-    console.info("clearAll()...");
+    console.info('clearAll()...');
     this.todosService.clearTodos();
     this.todos = this.todosService.getTodos();
     this.taskCount = this.todos.length;

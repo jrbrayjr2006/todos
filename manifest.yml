@@ -1,0 +1,7 @@
+---
+applications:
+- name: jbray-pvtl-todos
+  memory: 128M
+  instances: 1
+  path: dist
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack
